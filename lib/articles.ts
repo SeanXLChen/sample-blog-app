@@ -58,3 +58,21 @@ export const getCategorisedArticles = (): Record<string, ArticleItem[]> => {
     return categorisedArticles;
 }
 
+
+// serving the article content
+export const getArticleData = async (id: string) => {
+    const fullPath = path.join(articlesDirectory, `${id}.md`);
+    const fileContents = fs.readFileSync(fullPath, 'utf-8');
+
+    const matterResult = matter(fileContents);
+    const processedContent = await remark().use(html).process(matterResult.content);
+    const contentHtml = processedContent.toString();
+
+    return {
+        id,
+        contentHtml,
+        title: matterResult,
+        category: matterResult.data.category,
+        date: moment(matterResult.data.date, "DD-MM-YYYY").format("MMMM Do, YYYY"),
+    }
+}
