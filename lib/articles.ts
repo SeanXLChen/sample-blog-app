@@ -11,7 +11,7 @@ import type { ArticleItem } from '@/type';
 // The directory where the articles are stored
 const articlesDirectory = path.join(process.cwd(), 'articles');
 
-const getSortedArticles = (): ArticleItem[] => {
+export const getSortedArticles = (): ArticleItem[] => {
     const fileNames: string[] = fs.readdirSync(articlesDirectory); // Get all the file names in the articles directory
 
     const allArticleData = fileNames.map((fileName) => {
