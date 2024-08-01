@@ -1,8 +1,12 @@
 import React from 'react'
+import { useArticles } from '@/context/ArticlesProvider'
 
 const SelectCategory = () => {
+    const { articles, setArticles } = useArticles();
   return (
-    <div>SelectCategory</div>
+    <div>
+        input
+    </div>
   )
 }
 
