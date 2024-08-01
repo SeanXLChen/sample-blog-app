@@ -14,11 +14,11 @@ const Item = ({article} : Props) => {
         <div>
           {article.title}
         </div>
+        </Link>
         <div className='flex justify-start items-center'>
           <p className='text-sm text-neutral-500'>Published  •  {article.date}</p>
             <ItemCategoryTag category={article.category} />
         </div>
-    </Link>
     </div>
   )
 }
