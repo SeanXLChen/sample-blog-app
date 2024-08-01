@@ -11,7 +11,7 @@ const Item = ({article} : Props) => {
   return (
     <div className='border rounded-md p-3'>
         <Link href={`/article/${article.id}`}>
-        <div>
+        <div className='text-lg'>
           {article.title}
         </div>
         </Link>

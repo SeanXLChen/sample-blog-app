@@ -13,7 +13,7 @@ const ItemCategoryTag = ({category} : {category: string}) => {
 
   return (
     <>
-    <button className='text-sm text-neutral-500 mx-2 rounded-2xl border border-neutral-300 p-1' onClick={handleClick} >{category}</button>
+    <button className='text-sm text-neutral-500 mx-2 rounded-2xl border border-neutral-300 px-1.5' onClick={handleClick} >{category}</button>
     </>
   )
 }
