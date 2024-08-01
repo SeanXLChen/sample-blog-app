@@ -3,9 +3,8 @@
 import { useState, useEffect } from 'react';
 import Item from '@/components/Item';
 import { ArticleItem } from "@/type";
-import SelectCategory from '@/components/SelectCategory';
 import { ArticlesProvider, useArticles } from '@/context/ArticlesProvider';
-
+import SearchItems from '@/components/SearchItems';
 
 interface Props {
     articleItems: ArticleItem[]
@@ -16,7 +15,7 @@ const ArticlesContent = () => {
 
     return (
         <section className="flex flex-col gap-2">
-            <SelectCategory />
+            <SearchItems />
             {articles !== null && articles.map((article) => (
                 <Item
                     key={article.id}
