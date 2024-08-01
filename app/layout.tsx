@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Poppins } from "next/font/google";
+import { Cormorant_Garamond, Poppins, Inter } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"] });
 
 const cormorantGarmond = Cormorant_Garamond({
   subsets: ["latin"],
@@ -26,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${cormorantGarmond.variable} ${poppins.variable} bg-neutral-100`}>{children}</body>
+      <body className={`${cormorantGarmond.variable} ${poppins.variable} ${inter.className}bg-neutral-100`}>{children}</body>
     </html>
   );
 }
