@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${cormorantGarmond.variable} ${poppins.variable} ${inter.className}bg-neutral-100`}>{children}</body>
+      <body className={`${cormorantGarmond.variable} ${poppins.variable} ${inter.className} bg-neutral-100`}>{children}</body>
     </html>
   );
 }

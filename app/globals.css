@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 .article {
-  @apply flex flex-col gap-3 font-poppins text-lg tracking-wide mb-20;
+  @apply flex flex-col gap-4 text-lg tracking-wide mb-20;
 }
 
 .article > h1 {
-  @apply font-cormorantGarmond text-4xl text-center tracking-tight;
+  @apply text-4xl text-center tracking-tight;
 }
 
 .article > h2 {
-  @apply font-cormorantGarmond text-3xl tracking-tight;
+  @apply text-3xl tracking-tight;
 }
 
 .article > ol {
